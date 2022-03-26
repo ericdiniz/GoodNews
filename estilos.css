@@ -1,0 +1,290 @@
+html
+{
+    display: 100%;
+}
+body
+{
+    font-family: Georgia, serif;
+    text-align: center;
+}
+
+.imagensTaylor
+{
+    padding-bottom: 20px;
+}
+.cadaimgTaylor
+{
+    width: 300px;
+    height: 130px;
+}
+
+.btn2 {
+    border: none; /* Remove borders */
+    color: white; /* Add a text color */
+    padding: 14px 14px;  /*Add some padding */ 
+    cursor: pointer; /* Add a pointer cursor on mouse-over */
+    background: #5cd6d6;
+    margin:  0px 2px;
+    margin-top: 40px;
+
+  }
+.noticia
+{
+    width: 300px;
+    height: 300px;
+}
+
+.consertarimg
+{
+    width: 984px;
+    height: 600px;
+}
+
+.logo
+{
+    width: 380px;
+    height: 100px;
+}
+.corpointeiro
+{
+    background-color:#e6e6e6;
+}
+.rodape
+{
+    background-color: #cccccc;
+}
+.partecima
+{
+    background-color: #cccccc;
+}
+.orochi2
+{
+    padding-top: 20px;
+    background-color: #b3b3b3;
+    padding-bottom: 10px;
+    height: 320px;
+}
+.orochi3
+{
+    padding-left: 50px;
+    width: 330px;
+}
+.carouselcss
+{
+    margin-bottom: 10px;
+}
+.pequeno
+{
+    width: 150px;
+    height: 120px;
+}
+
+.autor
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.box-noticia {
+    margin: 10px 0px;
+    overflow: auto;
+    color: black;
+    clear: both;
+}
+
+.box-noticia img {
+    float: left;
+    margin-right: 10px;
+    width: 160px;
+    height: 150px;
+}
+
+.box-noticia .titulo {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.box-noticia .creditos {
+    color: red
+}
+
+    .cp
+    {
+        background-color: #999999;
+    }
+    .imgcentro
+    {
+      height: 120px;
+    }
+    .hks
+    {
+        height: 117px;
+    }
+    .trap
+    {
+        justify-content: center;
+    }
+    .toptop
+    {
+        padding-bottom: 80px;
+    }
+    #musicas
+    {
+        padding-bottom: 10px;
+    }
+@media only screen and (min-width: 769px) and (max-width: 965px) {
+    .imgcentro {
+      align-items: center;
+      width: 400px;
+      height: 200px;
+    }
+    .video
+    {
+        margin-bottom: 10px;
+    }
+    .imgcentro {
+        align-items: center;
+        width: 400px;
+        height: 200px;
+    }
+    .box-noticia img {
+        float: left;
+        margin-right: 10px;
+        width: 160px;
+        height: 150px;
+    }
+  }
+  @media only screen and (min-width: 376px) and (max-width: 768px) {
+    .ipadBtn 
+    {
+        padding-left: 50px;
+        justify-content: center;
+        flex-wrap: wrap;   
+    }
+    .escritas
+    {
+        display: none;
+    }
+    .box-noticia img {
+        display: none;
+    }
+    
+    .logologo {
+      padding-left: 150px;
+    }
+    .consertarimg
+    {
+        width: 700px;
+        height: 400px;
+    }
+    .orochi3
+    {
+        padding-top: 20px;
+    }
+    .imgcentro {
+        align-items: center;
+        width: 400px;
+        height: 200px;
+    }
+    .autor
+    {
+        font-size: 30px;
+    }
+    .cartinha
+    {
+        height: 230px !important;
+        align-items: center;
+    }
+    #hks
+    {
+        height: 228px;
+    }
+    .autorTEXT
+    {
+        padding-top: 30px;
+        text-align: center;
+        font-size: 30px !important;
+    }
+    .trap
+    {
+        padding-top: 20px;
+    }
+    .conhecer
+    {
+        font-size: 35px;
+        margin-top: 50px;
+    }
+    .video
+    {
+        width: 700px;
+        height: 400px;
+    }
+    .pequenodo8
+    {
+        font-size: 20px;
+    }
+    .centro
+    {
+        display: none;
+    }
+
+}
+@media only screen and (max-width: 375px) 
+{
+    .box-noticia img 
+    {
+        display: none;
+    }
+    .logologo 
+    {
+        width: 280px;
+        height: 100px;
+        padding-left: 30px;
+      }
+    .consertarimg
+    {
+        width: 300px;
+        height: 200px;
+    }
+    .orochi3
+    {
+        display: none;
+    }
+    .pequenodo8
+    {
+        font-size: 12px;
+    }
+    .autor
+    {
+        font-size: 20px;
+    }
+    .centro
+    {
+        display: none;
+    }
+    .btn2
+    {
+        display: none;
+    }
+}
+@media only screen and (max-width: 736px) 
+{
+    .box-noticia img 
+    {
+        display: none;
+    }       
+    .orochi3
+    {
+        padding-top: 20px;
+        display: none;
+    }
+    .logologo 
+    {
+        width: 280px;
+        height: 100px;
+        padding-left: 30px;
+    }
+    .btn2
+    {
+        display: none;
+    }
+}

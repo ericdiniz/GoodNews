@@ -1,0 +1,16 @@
+PARA ACESSAR O PORTAL É NECESSÁRIO:
+
+- Baixar o zip;
+- Coloca-lo em uma pasta;
+- Adicionar essa pasta ao Visual Studio Code;
+- Abrir o index.html com o live server;
+- Usar uma das seguintes URLs(pode ser que todas funcionem ou só uma delas, teste todas por favor):
+  
+http://localhost:5500/index.html?#list-item-4
+ERIC_INDEX.html
+http://localhost:5500/ERIC_INDEX.html?#
+http://localhost:5500/PortalEric/index.html#
+
+Qualquer dúvida só chamar no privado do whatsapp que ajudo.
+
+Eric Rodrigues Diniz - (31) 9 9665-1808 
