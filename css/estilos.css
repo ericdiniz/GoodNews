@@ -1,3 +1,12 @@
+:root{
+    --white: #f2f2f2;
+    --lightgray: #a6a6a6; 
+    --gray: #595959;
+    --graydark: #262626;
+    --black: #0d0d0d;
+
+}
+
 html
 {
     display: 100%;
@@ -20,7 +29,7 @@ body
 
 .btn2 {
     border: none; /* Remove borders */
-    color: white; /* Add a text color */
+    color: var(--branco); /* Add a text color */
     padding: 14px 14px;  /*Add some padding */ 
     cursor: pointer; /* Add a pointer cursor on mouse-over */
     background: #5cd6d6;
