@@ -1,0 +1,26 @@
+/* Seção principal */
+#news-featured {
+    max-width: 1000px;
+    background-color: var(--primary);
+}
+
+
+
+/* Botões */
+.news-button {
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+.news-button:hover {
+    background-color: var(--terciary);
+    color: var(--primary);
+}
+
+.featured-btn {
+    float: right;
+}
+
+
+
+
