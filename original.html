@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/03cf5e0551.js" crossorigin="anonymous"></script>
+    <!-- style -->
+    <link rel="stylesheet" href="./css/estilos.css"/>
+    <title>PORTAL DE NOTÍCIAS</title>
+</head>
+
+<body>
+    <div class="container partecima" id="partecima">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <img src="img/logotentativa.png" alt="" class="logologo logo">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto"></ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <ul class="navbar-nav mr-auto toptop">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#"><small>SUBSCRIBE</small><span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#"><small>REGISTER</small><span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#"><small>LOGIN</small><span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </nav>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="ipadBtn">
+                <a class="navbar-brand escritas" href="index.html">NOTÍCIAS GERAIS</a>
+                <button class="btn2 my-2 my-sm-0" type="submit" id="ECONOMIA">ECONOMIA</button>
+                <button class="btn2 my-2 my-sm-0" type="submit" id="POLITICA">POLÍTICA</button>
+                <button class="btn2 my-2 my-sm-0" type="submit" id="ESPORTES">ESPORTES</button>
+                <button class="btn2 my-2 my-sm-0" type="submit" id="TECNOLOGIA">TECNOLOGIA</button>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-1" type="text" id="txtPesquisa" placeholder="Pesquise aqui..."
+                        autocomplete="off">
+                    <button class="btn btn-success my-2 mx-1 my-sm-0" type="submit" id="btnPesquisa">Search</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+
+    <main class="container corpointeiro">
+        <section class="row corpopagina">
+            <div class="col-lg-8 col-12 col-md-12">
+                <div class="row orochi2" id="orochi2">
+                    <div class="col-12 col-md-6 col-sm-12">
+                        <div class="orochi3">
+                            <img class="img-fluid " src="img/orochi2.jpg" alt="imgcentro">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-sm-12">
+                        <h5>
+                            <p
+                                style="text-align: center; padding-top: 10px; font-family: Arial, Helvetica, sans-serif;">
+                                <strong>Tratamento com anticorpos contra a covid-19 começa a ser testado nos
+                                    EUA...</strong> </p>
+                        </h5>
+                        <p>
+                            <h7>
+                                <p style="text-align: center; font-family: Arial, Helvetica, sans-serif;"> A
+                                    farmacêutica americana Eli Lilly and Company divulgou que vai iniciar o primeiro
+                                    teste em humanos de um novo tratamento para a covid-19 utilizando anticorpos
+                                    produzidos em laboratório para combater a doença....
+                                    <br><a target="_blank"
+                                        href="https://www.uol.com.br/vivabem/noticias/redacao/2020/06/01/tratamento-com-anticorpos-contra-a-covid-19-comeca-a-ser-testado-nos-eua.htm">Clique
+                                        aqui para ver mais...</a></p>
+                            </h7>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="w-100 h-100" id="granderapper">
+                        <h3>
+                            <p id="tituloNoticias" style="text-align: center; padding-top: 30px;">PRINCIPAIS NOTÍCIAS
+                            </p>
+                        </h3>
+                    </div>
+                </div>
+                <div class="row" id="tela">
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-12">
+                        <div class="row inter">
+                            <div class="col-12 carousel_main">
+                                <div class="container text-center my-2">
+                                    <h3 style="color: black; margin-bottom: 25px;">ARTISTAS INTERNACIONAIS</h3>
+                                    <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+                                        <div class="carousel-inner w-100" role="listbox">
+                                            <div class="carousel-item row no-gutters active">
+                                                <div class="col-3 float-left"><img class="img-fluid"
+                                                        src="img/outkast.jpg">
+                                                    <p style="text-align: center;" class="pequenodo8">OUTKAST</p>
+                                                </div>
+                                                <div class="col-3 float-left"><img class="img-fluid" src="img/uzi.jpg">
+                                                    <p style="text-align: center;" class="pequenodo8">LIL UZI VERT</p>
+                                                </div>
+                                                <div class="col-3 float-left"><img class="img-fluid" src="img/2pac.jpg">
+                                                    <p style="text-align: center;" class="pequenodo8">2 PAC</p>
+                                                </div>
+                                                <div class="col-3 float-left"><img class="img-fluid" src="img/JayZ.jpg">
+                                                    <p style="text-align: center;" class="pequenodo8">JAY-Z</p>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item row no-gutters">
+                                                <div class="col-3 float-left"><img class="img-fluid"
+                                                        src="img/lilpeep.jpg">
+                                                    <p style="text-align: center;" class="pequenodo8">LIL PEEP</p>
+                                                </div>
+                                                <div class="col-3 float-left"><img class="img-fluid"
+                                                        src="img/lilpump.png">
+                                                    <p style="text-align: center;" class="pequenodo8">LIL PUMP</p>
+                                                </div>
+                                                <div class="col-3 float-left"><img class="img-fluid"
+                                                        src="img/eminem.jpg">
+                                                    <p style="text-align: center;" class="pequenodo8">EMINEM</p>
+                                                </div>
+                                                <div class="col-3 float-left"><img class="img-fluid"
+                                                        src="img/djkhaled.jpg">
+                                                    <p style="text-align: center;" class="pequenodo8">DJ KHALED </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control-prev" href="#recipeCarousel" role="button"
+                                            data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#recipeCarousel" role="button"
+                                            data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row col-md-12">
+                    <div id="myModal" class="modal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <p id="SearchParagraphModal"></p>
+                                    <button type="button" id="btnSave" class="btn btn-success" onclick="salvaPesquisa()"
+                                        data-dismiss="modal">Save</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12 col-md-12">
+                <div class="row">
+                    <div class="col-md-12 col-12 my-2" id="artistas">
+                        <h5>
+                            <p class="autor" style="text-align: center; padding-top: 06px; color: black;">
+                                <strong>PESQUISAS RECENTES</strong>
+                            </p>
+                        </h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <ul style="text-align: center; padding-left: 100px;" id="saveSearchs">
+
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-12 my-2" id="artistas">
+                        <h5>
+                            <p class="autor" style="text-align: center; padding-top: 06px; color: black;">
+                                <strong>MELHORES
+                                    PLAYLISTS</strong>
+                            </p>
+                        </h5>
+                    </div>
+                </div>
+                <div class="row trap" id="fof">
+                    <iframe src="https://open.spotify.com/embed/album/6DEjYFkNZh67HP7R9PSZvv" width="300" height="300"
+                        frameborder="0" allowtransparency="true" allow="encrypted-media" id="musicas"></iframe>
+                </div>
+                <br>
+                <div class="row trap" id="fof">
+                    <iframe src="https://open.spotify.com/embed/album/1NAmidJlEaVgA3MpcPFYGq" width="300" height="300"
+                        frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-12 my-3" id="ART">
+                        <h4>
+                            <p style="text-align: center; padding-top: 10px; color: black;" class="conhecer">
+                                <strong>MAIS NOTÍCIAS...</strong>
+                            </p>
+                        </h4>
+                    </div>
+                    <div class="row" id="divIMG">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container rodape">
+        <div class="row">
+            <div class="col-md-8" style="text-align: center; color: black;">
+                <h4>
+                    <p style="text-align: center; padding-top: 20px;">Falando um pouco sobre o site</p>
+                </h4>
+                <p style="font-size: 18px;">Site realizado para fins escolares, feito por Eric Rodrigues Diniz,
+                    aluno do curso Ciência da Computação da Praça da Liberdade(PUC Minas).
+                    O mesmo é um portal de notícias abrangindo diversos assuntos e também possui algumas partes
+                    com a criatividade do autor, as notícias são apresentadas com NewsApi.
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h2>
+                    <p style="text-align: center; color: black; padding-top: 20px;">FOLLOW ME</p>
+                </h2>
+                <div class="row" style="text-align: center; padding: 20px;">
+                    <div class="col-md-4 col-12">
+                        <a target="_blank" href="https://twitter.com/Eric75606662"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <a target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <a target="_blank" href="https://www.instagram.com/_ericdinizz/?hl=pt-br"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="row" style="text-align: center; padding: 20px;">
+                    <div class="col-md-4 col-12">
+                        <a target="_blank"
+                            href="https://www.youtube.com/channel/UC5CnlQLXmUG4JGZ14zy5ZXw?view_as=subscriber"><i
+                                class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <a target="_blank" href=""><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <a target="_blank" href=""><i class="fab fa-snapchat"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-12 cp">
+                <h5>
+                    <p style="text-align: center; padding-top: 10px; font-size: 0.7em;">&copy;copyright 2020 - ERIC
+                        DINIZ All Rights Reserved</p>
+                </h5>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <div>
+        <a href="https://www.flaticon.com/br/autores/pixel-perfect" title="Pixel perfect"></a>
+        <a href="https://www.flaticon.com/br/" title="Flaticon"></a>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
