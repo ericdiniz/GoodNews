@@ -33,6 +33,8 @@ onload = () => {
     }
 
     imprimePesquisaSalvas();
+
+
 }
 
 function exibeNoticias() {
@@ -89,7 +91,7 @@ function PesquisaSource(query) {
         let ParagraphModal = document.getElementById('SearchParagraphModal');
         ParagraphModal.innerHTML = `Deseja salvar a pesquisa: <br>${query}`;
         queryAtual = query;
-    }   
+    }
     else { ParagraphModal.innerText = 'No Searchs yet'; }
 
 
@@ -126,7 +128,7 @@ function salvaPesquisa() {
     let listaArray = [];
     let listaGravada = localStorage.getItem('itensPesquisados');
 
-    if(listaGravada)
+    if (listaGravada)
         listaArray = JSON.parse(listaGravada);
 
     listaArray.push(queryAtual);
@@ -150,37 +152,65 @@ function salvaPesquisa() {
     imprimePesquisaSalvas();
 }
 
+function ApagarLista() {
+
+    console.log("limpou");
+
+    window.localStorage.clear();
+
+    listaGravada.length = 0;
+
+    imprimePesquisaSalvas();
+}
+
+var listaGravada = localStorage.getItem('itensPesquisados');
+
 function imprimePesquisaSalvas() {
-    let listaGravada = localStorage.getItem('itensPesquisados');
 
-    if (listaGravada) {
-        let listaArray = JSON.parse(listaGravada);
+    if (listaGravada.length == 0) {
+        var z = document.getElementById('saveSearchs').innerHTML = "";
+        z.appendChild();
+/*
+        var qtd = document.querySelectorAll('#id'.length;
 
-        document.getElementById('saveSearchs').innerHTML = "";
 
-        for (let i = listaArray.length; i > 0; i--) {
-            if (listaArray[i] == null) {
-                //listaArray[i].hide();
-            }
-            else {
-                let a = document.createElement("a");
-                a.href = '#';
-                a.addEventListener('click', () => PesquisaSource(listaArray[i]));
-                a.appendChild(document.createTextNode(listaArray[i]));
+        while (qtd < 0) { let teste = document.getElementById("id") }
 
-                //<a href="#"/ onClick="PesquisaSource">valorPesquisado</a>;
+        teste.outerHTML = '';
 
-                let li = document.createElement("li");
-                li.appendChild(a);
+        qtd--;
+        */
+    }  
+}
 
-                let lista = document.getElementById('saveSearchs');
-                lista.appendChild(li);
-            }
+
+if (listaGravada) {
+    let listaArray = JSON.parse(listaGravada);
+
+    document.getElementById('saveSearchs').innerHTML = "";
+
+    for (let i = listaArray.length; i > 0; i--) {
+        if (listaArray[i] == null) {
+            //listaArray[i].hide();
         }
-    } else {
-        let lista = document.getElementById('saveSearchs');
-        lista.appendChild(document.createTextNode('Nenhuma pesquisa anterior'));
+        else {
+            let a = document.createElement("a");
+            a.href = '#';
+            a.addEventListener('click', () => PesquisaSource(listaArray[i]));
+            a.appendChild(document.createTextNode(listaArray[i]));
+
+            let li = document.createElement("li");
+            li.appendChild(a);
+
+            let lista = document.getElementById('saveSearchs');
+            lista.appendChild(li);
+
+        }
     }
+} else {
+    let lista = document.getElementById('saveSearchs');
+    lista.appendChild(document.createTextNode(''));
+}
 }
 
 $(window).load(ModalSave.hide());
