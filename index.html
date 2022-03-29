@@ -92,19 +92,22 @@
                     <h5 class="card-title mt-3"><strong>PRINCIPAIS NOTÍCIAS</strong></h5>
                     <div id="screen"></div> <!--Adicionar notícias no JS-->
                 </article>
+                <article id="international-artists" class="row g-0">                  
+                    <h5 class="card-title mt-3"><strong>ARTISTAS INTERNACIONAIS</strong></h5>
+                </article>
             </section>
-            <aside class="mt-2 mb-3 col-md-3">
+            <aside class="mb-3 col-md-3">
                 <div class="row">
-                    <article>
+                    <article class="mt-2">
                         <h5><strong>PESQUISAS RECENTES</strong></h5>
                         <div class="row">
                             <ul id="saveSearchs"></ul>
                         </div>
-                        <button class="btn btn-danger align-end" onclick="ApagarLista()">
+                        <button class="btn btn-danger float-end" onclick="ApagarLista()">
                             <i class="far fa-trash-alt"></i>
                         </button>
                     </article>
-                    <article>
+                    <article class="mt-2">
                         <h5><strong>MELHORES PLAYLISTS</strong></h5>
                         <div id="fof" class="row trap mb-3" >
                             <iframe src="https://open.spotify.com/embed/album/6DEjYFkNZh67HP7R9PSZvv" width="300" height="300"
@@ -114,10 +117,10 @@
                             <iframe src="https://open.spotify.com/embed/album/1NAmidJlEaVgA3MpcPFYGq" width="300" height="300"
                                 frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                         </div>
+                        <button class="btn more-button float-end">
+                            <small>MAIS NOTÍCIAS...</small>
+                        </button>
                     </article>
-                    <button class="btn more-button">
-                        <small>MAIS NOTÍCIAS...</small>
-                    </button>
                 </div>
             </aside>
         </div>
