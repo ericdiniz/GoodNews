@@ -19,26 +19,28 @@
     font-family: 'Lato', sans-serif;
 }
 
-h1, 
+body {
+    background-color: var(--primary);
+}
+
+/*h1, 
 h2,
 h3, 
 h4, 
 h5, 
 h6 {
     font-family: 'Abril Fatface', cursive;
-}
+}*/
 
 a {
     text-decoration: none;
-    color: white;
+    color: var(--light);
 }
 
 
-/* Header registro*/
-#header {
-    background-color: var(--primary);
-}
-.link-user {
+/* Botões */
+.link-user,
+#social-media i {
     color: var(--secondary);
 }
 
@@ -46,7 +48,22 @@ a {
     color: var(--light);
 }
 
+#social-media i:hover {
+    color: var(--primary);
+}
+
 .logo-header {
     max-width: 250px;
 }
 
+.news-button,
+.more-button {
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+.news-button:hover,
+.more-button:hover {
+    background-color: var(--terciary);
+    color: var(--primary);
+}

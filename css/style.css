@@ -1,25 +1,31 @@
 /* Seção principal */
 #news-featured {
     max-width: 1000px;
-    background-color: var(--primary);
+    background-color: var(--light);
+    border: none;
 }
 
-
-
-/* Botões */
-.news-button {
-    background-color: var(--secondary);
-    color: var(--primary);
+/* Seção Sobre e Siga-nos */
+#final-section {
+    background-color: var(--light);
 }
 
-.news-button:hover {
-    background-color: var(--terciary);
-    color: var(--primary);
+#about,
+#social-media {
+    background-color: transparent;
+    border: none;
 }
 
-.featured-btn {
+#social-media i {
+    margin-bottom: 0.8rem;
+}
+
+/* Aside */
+.more-button {
+    max-width: 160px;
     float: right;
 }
+
 
 
 
