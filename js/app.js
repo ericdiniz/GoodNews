@@ -170,7 +170,7 @@ function imprimePesquisaSalvas() {
     if (listaGravada.length == 0) {
         var z = document.getElementById('saveSearchs').innerHTML = "";
         z.appendChild();
-/*
+        /*
         var qtd = document.querySelectorAll('#id'.length;
 
 
@@ -211,7 +211,7 @@ if (listaGravada) {
     let lista = document.getElementById('saveSearchs');
     lista.appendChild(document.createTextNode(''));
 }
-}
+
 
 $(window).load(ModalSave.hide());
 
