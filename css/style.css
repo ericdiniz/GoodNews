@@ -96,3 +96,23 @@
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
+
+/* ARTISTAS INTERNACIONAIS*/
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.row {
+    display: flex;
+    margin: auto;
+}
+
+.column {
+    flex: 33.33%;
+    padding: 5px;
+}
+
+/* PLAYLISTS */
+.trap {
+    justify-content: center;
+    margin: auto;
+    width: 350px;
+    height: 350px;
+}
