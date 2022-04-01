@@ -46,20 +46,19 @@ function exibeNoticias() {
     for (i = 0; i < 5; i++) {
         let noticia = dados.articles[i];
         let data = new Date(noticia.publishedAt);
-
+                
         texto = texto + `
-        
-                <div class="box-noticia">
-                  <img src="${noticia.urlToImage}" alt="" class="card-img-top" alt="...">
-                  <span class="titulo">${noticia.title}</span><br>
-                  <span class="creditos">${data.toLocaleDateString()} - 
-                  ${noticia.source.name} - 
-                  ${noticia.author}</span><br>
-                  <span class="text">
-                  <span class="text">
-                  ${noticia.content}  <a href="${noticia.url}" target="_blank">Leia mais ...</a>
-                  </span>
-                </div>    
+        <div class="box-noticia">
+        <img src="${noticia.urlToImage}" alt="" class="card-img-top" alt="...">
+        <span class="titulo">${noticia.title}</span><br>
+        <span class="creditos">${data.toLocaleDateString()} - 
+        ${noticia.source.name} - 
+        ${noticia.author}</span><br>
+        <span class="text">
+        <span class="text">
+        ${noticia.content}  <a href="${noticia.url}" target="_blank">Leia mais ...</a>
+        </span>
+      </div>
         `;
     };
 
@@ -110,12 +109,16 @@ function exibeImgs() {
 
     // Montar texto HTML das noticias
     let dados = JSON.parse(this.responseText);
-    for (i = 0; i < 6; i++) {
+    for (i = 0; i < 3; i++) {
         let imagens = dados.articles[i]; // ${imagens.urlToImage}
         texto = texto + `
-      <div class="col-md-6 col-6 imagensTaylor">
-      <a href="${imagens.url}"  target="_blank"><img class="img-fluid cadaimgTaylor" src="${imagens.urlToImage}"></a>
-      </div>
+
+        <div class="maisnoticias">
+        <img src="${imagens.urlToImage}" alt="Avatar" class="cadaimgTaylor">
+        <div class="overlay">
+            <div class="text arroz"><a href="${imagens.url}" target="_blank">SAIBA MAIS... <br>${imagens.title}</a></div>
+        </div>
+        </div>
       `;
     };
 
@@ -151,7 +154,7 @@ function salvaPesquisa() {
     //$(`<a href="#">${valorPesquisado}</a>`).click(() => PesquisaSource(valorPesquisado)).appendTo('#saveSearchs');
     imprimePesquisaSalvas();
 }
-
+/*
 function ApagarLista() {
 
     console.log("limpou");
@@ -179,10 +182,10 @@ function imprimePesquisaSalvas() {
         teste.outerHTML = '';
 
         qtd--;
-        */
+        
     }  
 }
-
+*/
 
 if (listaGravada) {
     let listaArray = JSON.parse(listaGravada);

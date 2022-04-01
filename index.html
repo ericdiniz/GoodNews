@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +8,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>GoodNews | O seu portal de notícias</title>
+    <title>GoodNews</title>
 </head>
 
 <body>
@@ -21,9 +20,6 @@
 
                 <div class="d-flex">
                     <ul class="navbar-nav me-auto mb-2 mb-sm-0 flex-row">
-                        <li class="nav-item me-2">
-                            <a class="nav-link link-user" href="#">Inscreva-se</a>
-                        </li>
                         <li class="nav-item me-2">
                             <a class="nav-link link-user" href="#">Registrar</a>
                         </li>
@@ -46,25 +42,25 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-sm-0 flex-row">
                         <li class="nav-item me-2 pe-2">
-                            <a class="nav-link disabled">NOTÍCIAS GERAIS</a>
+                            <a class="nav-link disabled" href="index.html">NOTÍCIAS GERAIS</a>
                         </li>
                         <li class="nav-item me-2">
-                            <a class="nav-link news-button" href="#">ECONOMIA</a>
+                            <a class="nav-link news-button" type="submit" id="ECONOMIA">ECONOMIA</a>
                         </li>
                         <li class="nav-item me-2">
-                            <a class="nav-link news-button" href="#">POLÍTICA</a>
+                            <a class="nav-link news-button" type="submit" id="POLITICA">POLÍTICA</a>
                         </li>
                         <li class="nav-item me-2">
-                            <a class="nav-link news-button" href="#">ESPORTES</a>
+                            <a class="nav-link news-button" type="submit" id="ESPORTES">ESPORTES</a>
                         </li>
                         <li class="nav-item me-2">
-                            <a class="nav-link news-button" href="#">TECNOLOGIA</a>
+                            <a class="nav-link news-button" type="submit" id="TECNOLOGIA">TECNOLOGIA</a>
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Pesquise aqui..."
-                            aria-label="Search">
-                        <button class="btn btn-success" type="submit"><i class="fas fa-search"></i></button>
+                        <input class="form-control me-2" type="text" placeholder="Pesquise aqui..." id="txtPesquisa">
+                        <button class="btn btn-success" type="submit" id="btnPesquisa">
+                            <i class="fas fa-search"></i></button>
                     </form>
                 </div>
             </div>
@@ -76,25 +72,40 @@
                         <img src="./img/section-featured-img.jpg" class="img-fluid" alt="...">
                     </div>
                     <div class="col-md-8 col-sm-12">
-                        <div class="card-body">
+                        <div class="card-body justify-content-between">
                             <h5 class="card-title">Tratamento com anticorpos contra a covid-19 começa a ser testado nos
                                 EUA...</h5>
                             <p class="card-text">
                                 A farmacêutica americana Eli Lilly and Company divulgou que vai iniciar o primeiro
                                 teste em humanos de um novo tratamento para a covid-19 utilizando anticorpos
                                 produzidos em laboratório para combater a doença....</p>
-                            <button type="button" class="btn news-button float-end">Clique
+                            <button type="button" class="btn news-button float-end" style="margin: 0 auto;">Clique
                                 aqui para ver mais...</button>
                         </div>
                     </div>
                 </article>
-                <article id="news-js" class="row g-0">                  
-                    <h5 class="card-title mt-3"><strong>PRINCIPAIS NOTÍCIAS</strong></h5>
-                    <div id="screen"></div> <!--Adicionar notícias no JS-->
+                <article class="row g-0">                  
+                    <h5 class="card-title mt-3 text-center"><strong>PRINCIPAIS NOTÍCIAS</strong></h5>
+                    <div class="row" id="tela"></div>
                 </article>
                 <article id="international-artists" class="row g-0">                  
-                    <h5 class="card-title mt-3"><strong>ARTISTAS INTERNACIONAIS</strong></h5>
+                    <h5 class="card-title mt-3 text-center"><strong>ARTISTAS INTERNACIONAIS</strong></h5>
+                    
                 </article>
+                <div class="row col-md-12">
+                    <div id="myModal" class="modal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <p id="SearchParagraphModal"></p>
+                                    <button type="button" id="btnSave" class="btn btn-success" onclick="salvaPesquisa()"
+                                        data-dismiss="modal">Save</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             <aside class="mb-3 col-md-3">
                 <div class="row">
@@ -117,15 +128,19 @@
                             <iframe src="https://open.spotify.com/embed/album/1NAmidJlEaVgA3MpcPFYGq" width="300" height="300"
                                 frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                         </div>
-                        <button class="btn more-button float-end">
-                            <small>MAIS NOTÍCIAS...</small>
+                        <div class="row text-center" style="margin-bottom: 10px; padding-left: 90px;">
+                        <button class="btn more-button float-end maisnoticias">
+                            <small class="mais">MAIS NOTÍCIAS...</small>
                         </button>
+                        </div>
+                        <div class="row" id="divIMG">
+
+                        </div>
                     </article>
                 </div>
             </aside>
         </div>
     </main>
-
     <section id="final-section">
         <div class="container">
             <div class="row">
@@ -133,7 +148,7 @@
                     <div class="card-body">
                         <h4 class="card-title text-center">Falando um pouco sobre o site</h4>
                         <p class="card-text">Site realizado para fins escolares, feito por Eric Rodrigues Diniz,
-                            aluno do curso Ciência da Computação da Praça da Liberdade (PUC Minas).
+                            aluno do curso Engenharia de Software da Praça da Liberdade (PUC Minas).
                             O mesmo é um portal de notícias abrangindo diversos assuntos e também possui algumas partes
                             com a criatividade do autor, as notícias são apresentadas com NewsApi.</p>
                     </div>
@@ -143,17 +158,7 @@
                         <h4 class="card-title text-center">Siga-nos</h4>
                         <div class="row">
                             <div class="col-4">
-                                <a href="https://twitter.com/Eric75606662" target="_blank">
-                                    <i class="fab fa-twitter fa-3x"></i>
-                                </a>
-                            </div>
-                            <div class="col-4">
-                                <a href="https://www.facebook.com/" target="_blank">
-                                    <i class="fab fa-facebook fa-3x"></i>
-                                </a>
-                            </div>
-                            <div class="col-4">
-                                <a href="https://www.instagram.com/_ericdinizz/?hl=pt-br" target="_blank">
+                                <a href="https://www.instagram.com/ericdiniz01/?hl=pt-br" target="_blank">
                                     <i class="fab fa-instagram fa-3x"></i>
                                 </a>
                             </div>
@@ -167,9 +172,6 @@
                                 <a href="#" target="_blank">
                                     <i class="fab fa-whatsapp fa-3x"></i>
                                 </a>
-                            </div>
-                            <div class="col-4">
-                                <a href="#" target="_blank"><i class="fab fa-snapchat fa-3x"></i></a>
                             </div>
                         </div>
                     </div>
