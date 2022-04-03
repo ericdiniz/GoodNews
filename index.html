@@ -14,7 +14,7 @@
 
 <body>
     <header id="header">
-        <nav class="navbar">
+        <nav class="navbar menu-login">
             <div class="container-fluid container d-flex justify-content-between">
 
                 <a class="navbar-brand" href="#"><img src="img/logo.png" alt="" class="logo-header"></a>
@@ -31,11 +31,9 @@
                 </div>
             </div>
         </nav>
-    </header>
-    <main class="section-featured container">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse"
+        <nav class="navbar navbar-expand-lg menu-nav">
+            <div class="container-fluid container">
+                <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -46,16 +44,16 @@
                             <a class="nav-link disabled" href="index.html">NOTÍCIAS GERAIS</a>
                         </li>
                         <li class="nav-item me-2">
-                            <a class="nav-link news-button" type="submit" id="ECONOMIA">ECONOMIA</a>
+                            <button type="button" class="btn nav-link news-button" id="economia">ECONOMIA</button>
                         </li>
                         <li class="nav-item me-2">
-                            <a class="nav-link news-button" type="submit" id="POLITICA">POLÍTICA</a>
+                            <button type="button" class="btn nav-link news-button" id="politica">POLÍTICA</button>
                         </li>
                         <li class="nav-item me-2">
-                            <a class="nav-link news-button" type="submit" id="ESPORTES">ESPORTES</a>
+                            <button type="button" class="btn nav-link news-button" id="esportes">ESPORTES</button>
                         </li>
                         <li class="nav-item me-2">
-                            <a class="nav-link news-button" type="submit" id="TECNOLOGIA">TECNOLOGIA</a>
+                            <button type="button" class="btn nav-link news-button" id="tecnologia">TECNOLOGIA</button>
                         </li>
                     </ul>
                     <form class="d-flex">
@@ -66,11 +64,13 @@
                 </div>
             </div>
         </nav>
+    </header>
+    <main class="section-featured container">
         <div class="row">
             <section class="mb-3 col-md-9">
                 <article id="news-featured" class="row g-0 mt-2">
                     <div class="col-md-4 col-sm-12">
-                        <img src="./img/section-featured-img.jpg" class="img-fluid" alt="...">
+                        <img src="./img/section-featured-img.jpg" class="img-fluid" alt="Teste tratamendo contra COVID-19">
                     </div>
                     <div class="col-md-8 col-sm-12">
                         <div class="card-body justify-content-between">
@@ -85,34 +85,41 @@
                         </div>
                     </div>
                 </article>
-                <article class="row g-0">
+                <article id="main-news" class="row g-0 mt-3 rounded">
                     <h5 class="card-title mt-3 text-center"><strong>PRINCIPAIS NOTÍCIAS</strong></h5>
                     <div class="row" id="tela"></div>
                 </article>
-                <article id="international-artists" class="row g-0">
+                <article id="international-artists" class="row g-0 pb-3 px-3">
                     <h5 class="card-title mt-3 text-center"><strong>ARTISTAS INTERNACIONAIS</strong></h5>
-                    <div class="row">
-                        <div class="column">
-                            <img src="img/uzi.jpg" alt="Snow" style="width:100%">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <div class="row">
+                                <div class="card col-md-4 card-artist">
+                                    <img src="./img/artistas01.jpg" alt="Uzi">
+                                </div>
+                                <div class="card col-md-4 card-artist">
+                                    <img src="./img/artistas02.jpg" alt="2Pac">
+                                </div>
+                                <div class="card col-md-4 card-artist">
+                                    <img src="./img/artistas03.jpg" alt="Jay-Z">
+                                </div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="row">
+                                <div class="card col-md-4 card-artist">
+                                    <img src="./img/artistas04.jpg" alt="Lilpeep">
+                                </div>
+                                <div class="card col-md-4 card-artist">
+                                    <img src="./img/artistas05.jpg" alt="Eminem">
+                                </div>
+                                <div class="card col-md-4 card-artist">
+                                    <img src="./img/artistas06.jpg" alt="DJ Khaled">
+                                </div>
+                            </div>
                         </div>
-                        <div class="column">
-                            <img src="img/2pac.jpg" alt="Forest" style="width:100%">
-                        </div>
-                        <div class="column">
-                            <img src="img/JayZ.jpg" alt="Mountains" style="width:100%">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="column">
-                            <img src="img/lilpeep.jpg" alt="Snow" style="width:100%">
-                        </div>
-                        <div class="column">
-                            <img src="img/eminem.jpg" alt="Forest" style="width:100%">
-                        </div>
-                        <div class="column">
-                            <img src="img/djkhaled.jpg" alt="Mountains" style="width:100%">
-                        </div>
-                    </div>
+                      </div>
                 </article>
                 <div class="row col-md-12">
                     <div id="myModal" class="modal" tabindex="-1" role="dialog">
@@ -142,21 +149,20 @@
                     </article>
                     <article class="mt-2">
                         <h5><strong>MELHORES PLAYLISTS</strong></h5>
-                        <div id="fof" class="row trap mb-3">
+                        <div class="row playlist mb-3">
                             <iframe src="https://open.spotify.com/embed/album/6DEjYFkNZh67HP7R9PSZvv" frameborder="0" allowtransparency="true" allow="encrypted-media"
                                 id="musicas"></iframe>
                         </div>
-                        <div id="fof" class="row trap mb-2">
+                        <div class="row playlist mb-2">
                             <iframe src="https://open.spotify.com/embed/album/1NAmidJlEaVgA3MpcPFYGq" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                         </div>
-                        <div class="row text-center" style="margin-bottom: 10px; padding-left: 90px;">
-                            <button class="btn more-button float-end maisnoticias">
-                                <small class="mais">MAIS NOTÍCIAS...</small>
-                            </button>
-                        </div>
-                        <div class="row" id="divIMG">
-
-                        </div>
+                    </article>
+                    <article class="mt-2">
+                        <h5><strong>MAIS NOTÍCIAS</strong></h5>
+                        <div id="more-img-div"></div>
+                        <button class="btn more-button float-end">
+                            <small class="mais">Ver mais...</small>
+                        </button>
                     </article>
                 </div>
             </aside>

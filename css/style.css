@@ -1,17 +1,19 @@
 /* Seção principal */
 #news-featured {
     max-width: 1000px;
-    background-color: var(--light);
+    background-color: transparent;
     border: none;
 }
 
 /* Seção Sobre e Siga-nos */
+#main-news,
 #final-section {
     background-color: var(--light);
 }
 
 #about,
-#social-media {
+#social-media,
+.card-artist {
     background-color: transparent;
     border: none;
 }
@@ -20,99 +22,26 @@
     margin-bottom: 0.8rem;
 }
 
+/* Seção Principais Notícias*/
+
+.noticia-principal {
+    border: none;    
+}
+
 /* Aside */
-.more-button {
-    max-width: 160px;
-    float: right;
-}
-
-.maisnoticias {
-    margin: 10px 0;
-}
-
-
-/* noticias gerais*/
-.box-noticia {
-    margin: 10px 0px;
-    overflow: auto;
-    color: black;
-    clear: both;
-}
-
-.box-noticia img {
-    float: left;
-    margin-right: 10px;
-    width: 200px;
-    height: 150px;
-}
-
-.box-noticia .titulo {
-    font-size: 17px;
-    font-weight: bold;
-}
-
-.box-noticia .creditos {
-    color: red
-}
-
-/*mais noticias*/
-.maisnoticias {
-    position: relative;
-    width: 100%;
-}
-
-.cadaimgTaylor {
-    width: 300px;
-    height: 180px;
-    margin: auto;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
+.card-img-overlay {
     opacity: 0;
     transition: .3s ease;
     background-color: var(--secondary);
-    margin: auto;
     text-align: center;
 }
 
-.maisnoticias:hover .overlay {
+.card-img-overlay:hover {
     opacity: 0.8;
 }
 
-.arroz {
-    color: white;
-    opacity: 1;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-}
-
-/* ARTISTAS INTERNACIONAIS*/
-/* Three image containers (use 25% for four, and 50% for two, etc) */
-.row {
-    display: flex;
-    margin: auto;
-}
-
-.column {
-    flex: 33.33%;
-    padding: 5px;
-}
-
-/* PLAYLISTS */
-.trap {
-    justify-content: center;
-    margin: auto;
+/* Playlists */
+.playlist {
     width: 350px;
     height: 350px;
 }

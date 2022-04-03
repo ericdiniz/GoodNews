@@ -15,19 +15,19 @@ onload = () => {
     img.open('GET', `https://newsapi.org/v2/everything?q=${taylor}&language=pt&apiKey=${API_KEY}`);
     img.send();
 
-    let TEC = document.getElementById("TECNOLOGIA");
+    let TEC = document.getElementById("tecnologia");
     TEC.onclick = () => {
         PesquisaSource("Tecnologia");
     }
-    let POL = document.getElementById("POLITICA");
+    let POL = document.getElementById("politica");
     POL.onclick = () => {
         PesquisaSource("Política");
     }
-    let ESP = document.getElementById("ESPORTES");
+    let ESP = document.getElementById("esportes");
     ESP.onclick = () => {
         PesquisaSource("Esportes");
     }
-    let ECO = document.getElementById("ECONOMIA");
+    let ECO = document.getElementById("economia");
     ECO.onclick = () => {
         PesquisaSource("Economia");
     }
@@ -47,18 +47,24 @@ function exibeNoticias() {
         let noticia = dados.articles[i];
         let data = new Date(noticia.publishedAt);
                 
-        texto = texto + `
-        <div class="box-noticia">
-        <img src="${noticia.urlToImage}" alt="" class="card-img-top" alt="...">
-        <span class="titulo">${noticia.title}</span><br>
-        <span class="creditos">${data.toLocaleDateString()} - 
-        ${noticia.source.name} - 
-        ${noticia.author}</span><br>
-        <span class="text">
-        <span class="text">
-        ${noticia.content}  <a href="${noticia.url}" target="_blank">Leia mais ...</a>
-        </span>
-      </div>
+        texto = texto + 
+        `
+            <div class="card mb-3 noticia-principal">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="${noticia.urlToImage}" class="img-fluid rounded-start">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">${noticia.title}</h5>
+                        <p class="card-text"><small class="text-muted">${data.toLocaleDateString()} - 
+                        ${noticia.source.name} - 
+                        ${noticia.author}</small></p>
+                        <p class="card-text">${noticia.content}  <a href="${noticia.url}" target="_blank">Leia mais ...</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         `;
     };
 
@@ -104,20 +110,22 @@ function PesquisaSource(query) {
 
 //DIV DAS IMGS
 function exibeImgs() {
-    let divIMG = document.getElementById('divIMG');
+    let divIMG = document.getElementById('more-img-div');
     let texto = '';
 
     // Montar texto HTML das noticias
     let dados = JSON.parse(this.responseText);
     for (i = 0; i < 4; i++) {
         let imagens = dados.articles[i]; // ${imagens.urlToImage}
-        texto = texto + `
-
-        <div class="maisnoticias">
-        <img src="${imagens.urlToImage}" alt="Avatar" class="cadaimgTaylor">
-        <div class="overlay">
-            <div class="text arroz"><a href="${imagens.url}" target="_blank">SAIBA MAIS... <br>${imagens.title}</a></div>
-        </div>
+        texto = texto + 
+        `
+        <div class="card text-white">
+            <img src="${imagens.urlToImage}" class="card-img maisnoticias">
+            <div class="card-img-overlay">
+                <p class="card-text">
+                    <a href="${imagens.url}" target="_blank">${imagens.title}</a>
+                </p>
+            </div>
         </div>
       `;
     };
