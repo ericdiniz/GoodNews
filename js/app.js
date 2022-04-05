@@ -37,6 +37,7 @@ onload = () => {
 
 }
 
+
 function exibeNoticias() {
     let divTela = document.getElementById('tela');
     let texto = '';
@@ -115,6 +116,7 @@ function exibeImgs() {
 
     // Montar texto HTML das noticias
     let dados = JSON.parse(this.responseText);
+
     for (i = 0; i < 4; i++) {
         let imagens = dados.articles[i]; // ${imagens.urlToImage}
         texto = texto + 

@@ -34,6 +34,7 @@
     transition: .3s ease;
     background-color: var(--secondary);
     text-align: center;
+
 }
 
 .card-img-overlay:hover {
@@ -42,6 +43,13 @@
 
 /* Playlists */
 .playlist {
-    width: 350px;
-    height: 350px;
+    width: 310px;
+    height: 310px;
+}
+
+.maisnoticias{
+    width: 310px;
+    height: 155px;
+    background-color: transparent;
+    border: none;
 }
