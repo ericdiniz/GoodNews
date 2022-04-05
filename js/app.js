@@ -117,14 +117,14 @@ function exibeImgs() {
     // Montar texto HTML das noticias
     let dados = JSON.parse(this.responseText);
 
-    for (i = 0; i < 4; i++) {
+    for (i = 0; i < 5; i++) {
         let imagens = dados.articles[i]; // ${imagens.urlToImage}
         texto = texto + 
         `
         <div class="card text-white">
             <img src="${imagens.urlToImage}" class="card-img maisnoticias">
             <div class="card-img-overlay">
-                <p class="card-text">
+                <p class="card-text" id="ImgOverlay">
                     <a href="${imagens.url}" target="_blank">${imagens.title}</a>
                 </p>
             </div>
@@ -135,105 +135,3 @@ function exibeImgs() {
     // Preencher a DIV com o texto HTML
     divIMG.innerHTML = texto;
 }
-
-// SALVAR AS PESQUISAS
-function salvaPesquisa() {
-    let listaArray = [];
-    let listaGravada = localStorage.getItem('itensPesquisados');
-
-    if (listaGravada)
-        listaArray = JSON.parse(listaGravada);
-
-    listaArray.push(queryAtual);
-
-    localStorage.setItem('itensPesquisados', JSON.stringify(listaArray));
-
-    let a = document.createElement("a");
-    a.href = '#';
-    a.addEventListener('click', () => PesquisaSource(queryAtual));
-    a.appendChild(document.createTextNode(queryAtual));
-
-    //<a href="#"/ onClick="PesquisaSource">valorPesquisado</a>;
-
-    let li = document.createElement("li");
-    li.appendChild(a);
-
-    let lista = document.getElementById('saveSearchs');
-    lista.appendChild(li);
-
-    //$(`<a href="#">${valorPesquisado}</a>`).click(() => PesquisaSource(valorPesquisado)).appendTo('#saveSearchs');
-    imprimePesquisaSalvas();
-}
-/*
-function ApagarLista() {
-
-    console.log("limpou");
-
-    window.localStorage.clear();
-
-    listaGravada.length = 0;
-
-    imprimePesquisaSalvas();
-}
-
-var listaGravada = localStorage.getItem('itensPesquisados');
-
-function imprimePesquisaSalvas() {
-
-    if (listaGravada.length == 0) {
-        var z = document.getElementById('saveSearchs').innerHTML = "";
-        z.appendChild();
-        /*
-        var qtd = document.querySelectorAll('#id'.length;
-
-
-        while (qtd < 0) { let teste = document.getElementById("id") }
-
-        teste.outerHTML = '';
-
-        qtd--;
-        
-    }  
-}
-*/
-
-if (listaGravada) {
-    let listaArray = JSON.parse(listaGravada);
-
-    document.getElementById('saveSearchs').innerHTML = "";
-
-    for (let i = listaArray.length; i > 0; i--) {
-        if (listaArray[i] == null) {
-            //listaArray[i].hide();
-        }
-        else {
-            let a = document.createElement("a");
-            a.href = '#';
-            a.addEventListener('click', () => PesquisaSource(listaArray[i]));
-            a.appendChild(document.createTextNode(listaArray[i]));
-
-            let li = document.createElement("li");
-            li.appendChild(a);
-
-            let lista = document.getElementById('saveSearchs');
-            lista.appendChild(li);
-
-        }
-    }
-} else {
-    let lista = document.getElementById('saveSearchs');
-    lista.appendChild(document.createTextNode(''));
-}
-
-
-$(window).load(ModalSave.hide());
-
-$('#btnSave').click($("#myModal").hide());
-
-
-function ModalSave() {
-    $("#myModal").modal({
-        show: true,
-    });
-}
-setTimeout(ModalSave, 500);
