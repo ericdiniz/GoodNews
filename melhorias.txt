@@ -1,0 +1,7 @@
+MELHORIAS NO SITE: 
+
+- MELHORAR A PALHETA DE CORES, fontes(Abril Fatface, Lato), padronização do layout;
+
+- BOTAR O MODO NOTURNO E DIURNO;
+
+- LOGIN PADRÃO FIFA;
